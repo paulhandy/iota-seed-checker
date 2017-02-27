@@ -1,0 +1,15 @@
+{
+  "name": "lostseed",
+  "version": "1.0.0",
+  "description": "Finds any value in a set of lost seeds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "search": "node index.js"
+  },
+  "author": "Paul Handy (and Pascal L)",
+  "license": "MIT",
+  "dependencies": {
+    "iota.lib.js": "^0.1.5"
+  }
+}
