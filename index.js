@@ -9,20 +9,13 @@ var iotajs = new IOTA({
 //Takes a list of seeds and generates the first X addresses for each seed. 
 function generateAddresses() {
 
-  var returnedAdresses = []; //This Variable will get popullated with the generated addresses of all seeds
-
-
-  for (i = 0; i < config.seeds.length;) {
+  for (i = 0; i < config.seeds.length; i++) {
     iotajs.api.getNewAddress(config.seeds[i], {'index': 0, 'total': config.nAddr}, function(_, addresses) {
-      console.log(addresses);
-      //returnedAdresses.concat(addresses);
-      console.log(addresses); //Logs all generated addresses
+      
       getBalance(addresses); //Calls the getBalance function with all generated addresses as argument 
-      i++
+      
     });
   };
-
-  //log(returnedAdresses); //Logs all generated addresses
 };
 
 
@@ -30,14 +23,19 @@ function generateAddresses() {
 //Takes a list of addresses as argument and should get the balance for each address
 function getBalance(addresses) {
   iotajs.api.getBalances(addresses, 100, function(error, inputs) {
-
-    var totalValue = 0;
-    console.log(error);
-    console.log(inputs.balances);
+	var i = 0; 
+	var totalValue = 0; 
     inputs.balances.forEach(function(balance) {
-      totalValue += parseInt(balance);
-      console.log(totalValue); //Should log the balance of each address
+		totalValue += parseInt(balance); 
+		if (parseInt(balance) > 0) {
+			console.log(i+1 + " The address " + addresses[i] + " has a balance of: " + parseInt(balance));
+			console.log("Balance detected!!!");
+		} else {
+			console.log(i+1 + " The address " + addresses[i] + " has a balance of: " + parseInt(balance));
+		};
+	i++
     })
+	console.log("All addresses of this seeds contain " + totalValue + " tokens!")
   });
 };
 generateAddresses();
