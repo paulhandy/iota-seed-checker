@@ -2,8 +2,8 @@ var IOTA = require('iota.lib.js');
 var config = require('./config');
 
 var iotajs = new IOTA({
-  'host': 'http://148.251.233.147',
-  'port': 14265
+  'host': config.uri,
+  'port': config.port
 });
 
 //Takes a list of seeds and generates the first X addresses for each seed. 
