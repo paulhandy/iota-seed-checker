@@ -4,4 +4,5 @@ After running `npm install`, edit config.js, putting your number of seeds and nu
 
 #### Tip jar
 BTC: 1HLXnUmcUWZrH48xUjiRKgRK2RoGTUDwQn
+
 IOTA: QMDSYEV9HGSCS9BAFYDPPOIZPCPWWLLMMEFPQCVCCGS99XSGDHUWVDNKGZKKOIZAXWDDLLYJGJIOJNFSAIAMGTFDXA
