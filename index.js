@@ -10,7 +10,7 @@ var iotajs = new IOTA({
 function generateAddresses() {
 
   for (i = 0; i < config.seeds.length; i++) {
-    iotajs.api.getNewAddress(config.seeds[i], {'index': 0, 'total': config.nAddr}, function(_, addresses) {
+    iotajs.api.getNewAddress(config.seeds[i].toUpperCase(), {'index': 0, 'total': config.nAddr}, function(_, addresses) {
 
       getBalance(addresses); //Calls the getBalance function with all generated addresses as argument 
 
