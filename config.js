@@ -1,5 +1,5 @@
 module.exports = {
-  uri: 'http://148.251.233.147',
+  uri: '	http://service.iotasupport.com',
   port: 14265,
   seeds: ["SEEDONE", "SEEDTWO"],
   nAddr: 2

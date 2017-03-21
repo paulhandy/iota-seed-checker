@@ -25,7 +25,7 @@ function getBalance(addresses) {
   iotajs.api.getBalances(addresses, 100, function(error, inputs) {
     var i = 0; 
     var totalValue = 0; 
-    if(inputs.balances != null) {
+    if(inputs != null && inputs.balances != null) {
       inputs.balances.forEach(function(balance) {
         totalValue += parseInt(balance); 
         if (parseInt(balance) > 0) {
