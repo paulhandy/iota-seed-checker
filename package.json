@@ -10,6 +10,6 @@
   "author": "Paul Handy (and Pascal L)",
   "license": "MIT",
   "dependencies": {
-    "iota.lib.js": "^0.1.5"
+    "iota.lib.js": "^0.4.0"
   }
 }
